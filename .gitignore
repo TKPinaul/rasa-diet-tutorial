@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+
+# Rasa
+.rasa/
+models/
+logs/
+credentials.yml
+endpoints.yml
