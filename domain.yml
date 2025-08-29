@@ -11,6 +11,8 @@ intents:
 responses:
   utter_how_are_you:
   - text: I'm good, thanks! How about you?
+  - text: I'm fine! What about you?
+  - text: Doing well, thank you! How are you?
   utter_greet:
   - text: Hey! How are you?
   utter_cheer_up:
