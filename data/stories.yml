@@ -28,3 +28,17 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: interactive_story_1
+  steps:
+  - intent: bot_challenge
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - intent: ask_how_are_you
+  - action: utter_how_are_you
