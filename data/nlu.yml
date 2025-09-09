@@ -15,6 +15,9 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - bonjour
+    - bonsoir
+    - salut
 - intent: goodbye
   examples: |
     - cu
@@ -84,4 +87,11 @@ nlu:
     - am I talking to a human?
 - intent: ask_how_are_you
   examples: |
+    - how are you?
+    - how's it going?
+    - how are you doing?
+    - how do you feel?
+    - you good?
+    - ça va ?
+    - tu vas bien ?
     - Hi, how are you?
