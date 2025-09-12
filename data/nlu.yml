@@ -116,7 +116,10 @@ nlu:
 
 - intent: request_restaurant
   examples: |
-    - im looking for a restaurant
+    - can you help me find a restaurant?
+    - I'm looking for a restaurant
+    - I need a restaurant
+    - please find me a restaurant
     - can i get [swedish](cuisine) food in any area
     - a restaurant that serves [caribbean](cuisine) food
     - id like a restaurant

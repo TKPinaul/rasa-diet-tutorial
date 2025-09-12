@@ -43,15 +43,15 @@ rules:
     - intent: ask_how_are_you
     - action: utter_how_are_you
 
-- rule: respond to FAQs
-  steps:
-    - intent: faq
-    - action: utter_faq
+# - rule: respond to FAQs
+#   steps:
+#     - intent: faq
+#     - action: utter_faq
   
-- rule: respond to chitchat
-  steps:
-    - intent: chitchat
-    - action: utter_chitchat
+# - rule: respond to chitchat
+#   steps:
+#     - intent: chitchat
+#     - action: utter_chitchat
 
 - rule: activate restaurant form
   steps:

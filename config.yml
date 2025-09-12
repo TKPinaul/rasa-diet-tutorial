@@ -28,7 +28,10 @@ pipeline:
     epochs: 100
     retrieval_intent: chitchat
   - name: DucklingEntityExtractor
+    url: http://localhost:8000
     dimensions: ["number"]
+    locale: en_US
+    timezone: Europe/Berlin
   - name: FallbackClassifier
     threshold: 0.4
     ambiguity_threshold: 0.1
