@@ -4,56 +4,71 @@ rules:
 
 - rule: Say goodbye anytime the user says goodbye
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+    - intent: goodbye
+    - action: utter_goodbye
 
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+    - intent: bot_challenge
+    - action: utter_iamabot
 
 - rule: Greet the user
   steps:
-  - intent: greet
-  - action: utter_greet
+    - intent: greet
+    - action: utter_greet
 
 - rule: User is happy
   steps:
-  - intent: mood_great
-  - action: utter_happy
+    - intent: mood_great
+    - action: utter_happy
 
 - rule: User is unhappy
   steps:
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+    - action: utter_did_that_help
 
 - rule: User says yes
   steps:
-  - intent: affirm
-  - action: utter_affirm
+    - intent: affirm
+    - action: utter_affirm
 
 - rule: User says no
   steps:
-  - intent: deny
-  - action: utter_deny
+    - intent: deny
+    - action: utter_deny
 
 - rule: Answer when user asks how are you
   steps:
-  - intent: ask_how_are_you
-  - action: utter_how_are_you
+    - intent: ask_how_are_you
+    - action: utter_how_are_you
 
 - rule: respond to FAQs
   steps:
-  - intent: faq
-  - action: utter_faq
+    - intent: faq
+    - action: utter_faq
   
 - rule: respond to chitchat
   steps:
-  - intent: chitchat
-  - action: utter_chitchat
+    - intent: chitchat
+    - action: utter_chitchat
+
+- rule: activate restaurant form
+  steps:
+    - intent: request_restaurant
+    - action: restaurant_form
+    - active_loop: restaurant_form
+
+- rule: submit form
+  condition:
+  - active_loop: restaurant_form
+  steps:
+    - action: restaurant_form
+    - active_loop: null
+    - action: utter_submit
+    - action: utter_slots_values
 
 - rule: Fallback rule
   steps:
-  - intent: nlu_fallback
-  - action: utter_default
+    - intent: nlu_fallback
+    - action: utter_default
